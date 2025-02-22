@@ -1,0 +1,33 @@
+{
+    "name": "YouTube Channel Blocker",
+    "description": "YouTubeで視聴したくないチャンネルをブロックし、検索結果からも除外する拡張機能。ブロック機能のON/OFF切替も可能。",
+    "version": "1.1.0",
+    "manifest_version": 3,
+    "icons": {
+      "16": "icon.jpg",
+      "48": "icon.jpg",
+      "128": "icon.jpg"
+    },
+    "permissions": [
+      "storage",
+      "contextMenus"
+    ],
+    "host_permissions": [
+      "*://www.youtube.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content_script.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "YouTubeチャンネルブロッカー"
+    }
+  }
+  

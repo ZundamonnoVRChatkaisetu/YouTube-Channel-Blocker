@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ブロックしたチャンネル一覧管理</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 16px;
+        background-color: #f7f7f7;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      #blockedList {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .channel-item {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 6px;
+        padding: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      }
+      .channel-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 10px;
+        object-fit: cover;
+        background-color: #ddd;
+      }
+      .channel-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .channel-name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+        margin-bottom: 4px;
+      }
+      .channel-name:hover {
+        text-decoration: underline;
+      }
+      .btn-unblock {
+        background: #ff5555;
+        color: #fff;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .btn-unblock:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ブロックしたチャンネル一覧管理</h1>
+    <div id="blockedList"></div>
+    <script src="blocked_channels.js"></script>
+  </body>
+</html>
